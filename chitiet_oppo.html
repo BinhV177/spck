@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPPO - Cửa hàng công nghệ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="chitiet_oppo.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Thanh điều hướng -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="main.html">
+                Cửa hàng công nghệ
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="main.html"><i class="fas fa-home"></i> Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="submit.html"><i class="fas fa-headset"></i> Hỗ trợ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="submit.html"><i class="fas fa-file-contract"></i> Điều khoản</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="shopping_cart.html">
+                            <i class="fa-solid fa-cart-shopping"></i> Giỏ hàng
+                            <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="main_login_register.html"><i class="fas fa-sign-in-alt"></i> Đăng xuất</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background"></div>
+        <div class="container position-relative">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-md-6">
+                    <div class="hero-content text-white">
+                        <h1>OPPO</h1>
+                        <p class="lead">OPPO Electronics Corp - Công ty điện tử đa quốc gia của Trung Quốc.</p>
+                        <p>OPPO được thành lập vào năm 2004 bởi Tony Chen. Ban đầu, OPPO sản xuất các thiết bị điện tử như máy nghe nhạc MP3, DVD/Blu-ray. Từ năm 2008, công ty bắt đầu sản xuất điện thoại di động và nhanh chóng trở thành một trong những thương hiệu smartphone hàng đầu thế giới.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sản phẩm nổi bật -->
+    <section class="featured-products py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Sản phẩm OPPO nổi bật</h2>
+            <div class="row">
+                <!-- OPPO Find X7 Ultra -->
+                <div class="col-md-4 mb-4">
+                    <div class="card product-card h-100">
+                        <img src="https://cdn.viettablet.com/images/companies/1/oppo-find-x7-ultra/oppo-find-x7-ultra.jpg?1706262222923" class="card-img-top" alt="OPPO Find X7 Ultra">
+                        <div class="card-body">
+                            <h5 class="card-title">OPPO Find X7 Ultra</h5>
+                            <p class="card-text text-danger fw-bold">24.990.000₫</p>
+                            <p class="card-text">Chip Snapdragon 8 Gen 3, Camera 50MP, Màn hình AMOLED 2K</p>
+                            <button onclick="showPurchaseConfirmation({
+                                name: 'OPPO Find X7 Ultra',
+                                price: '24.990.000₫',
+                                image: 'https://cdn.viettablet.com/images/companies/1/oppo-find-x7-ultra/oppo-find-x7-ultra.jpg?1706262222923'
+                            })" class="btn btn-primary w-100">Đặt vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OPPO Pad 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card product-card h-100">
+                        <img src="https://cdn.tgdd.vn//News/0//ra-mat-oppo-pad-2-1-730x408.jpg" class="card-img-top" alt="OPPO Pad 2">
+                        <div class="card-body">
+                            <h5 class="card-title">OPPO Pad 2</h5>
+                            <p class="card-text text-danger fw-bold">14.990.000₫</p>
+                            <p class="card-text">Chip Dimensity 9000, 8GB RAM, 256GB ROM</p>
+                            <button onclick="showPurchaseConfirmation({
+                                name: 'OPPO Pad 2',
+                                price: '14.990.000₫',
+                                image: 'https://cdn.tgdd.vn//News/0//ra-mat-oppo-pad-2-1-730x408.jpg'
+                            })" class="btn btn-primary w-100">Đặt vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OPPO Watch 4 Pro -->
+                <div class="col-md-4 mb-4">
+                    <div class="card product-card h-100">
+                        <img src="https://cdn.tgdd.vn/Files/2023/08/29/1544960/oppowatch4pro-290823-173251-800-resize.jpg" class="card-img-top" alt="OPPO Watch 4 Pro">
+                        <div class="card-body">
+                            <h5 class="card-title">OPPO Watch 4 Pro</h5>
+                            <p class="card-text text-danger fw-bold">8.990.000₫</p>
+                            <p class="card-text">Màn hình AMOLED, Pin 5 ngày, Chống nước 5ATM</p>
+                            <button onclick="showPurchaseConfirmation({
+                                name: 'OPPO Watch 4 Pro',
+                                price: '8.990.000₫',
+                                image: 'https://cdn.tgdd.vn/Files/2023/08/29/1544960/oppowatch4pro-290823-173251-800-resize.jpg'
+                            })" class="btn btn-primary w-100">Đặt vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal xác nhận mua hàng -->
+    <div class="modal fade" id="confirmPurchaseModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Xác nhận mua hàng</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="product-info mb-3">
+                        <img id="modalProductImage" src="" alt="" class="img-fluid mb-2" style="max-height: 200px;">
+                        <h6 id="modalProductName"></h6>
+                        <p id="modalProductPrice" class="text-danger fw-bold"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Số lượng:</label>
+                        <div class="input-group">
+                            <button class="btn btn-outline-secondary" type="button" onclick="updateModalQuantity(-1)">-</button>
+                            <input type="number" class="form-control text-center" id="modalQuantity" value="1" min="1">
+                            <button class="btn btn-outline-secondary" type="button" onclick="updateModalQuantity(1)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Không</button>
+                    <button type="button" class="btn btn-primary" onclick="confirmPurchase()">Đặt mua</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Copy các hàm JavaScript từ main.html
+        function showPurchaseConfirmation(productInfo) {
+            if (!productInfo) {
+                alert('Không có thông tin sản phẩm!');
+                return;
+            }
+            
+            const modal = new bootstrap.Modal(document.getElementById('confirmPurchaseModal'));
+            
+            document.getElementById('modalProductImage').src = productInfo.image;
+            document.getElementById('modalProductName').textContent = productInfo.name;
+            document.getElementById('modalProductPrice').textContent = productInfo.price;
+            document.getElementById('modalQuantity').value = 1;
+            
+            document.getElementById('confirmPurchaseModal').dataset.productInfo = JSON.stringify(productInfo);
+            
+            modal.show();
+        }
+
+        function updateModalQuantity(change) {
+            const quantityInput = document.getElementById('modalQuantity');
+            let newValue = parseInt(quantityInput.value) + change;
+            if (newValue < 1) newValue = 1;
+            quantityInput.value = newValue;
+        }
+
+        function confirmPurchase() {
+            const modal = document.getElementById('confirmPurchaseModal');
+            const productInfo = JSON.parse(modal.dataset.productInfo || '{}');
+            const quantity = parseInt(document.getElementById('modalQuantity').value);
+            
+            if (!productInfo.name) {
+                alert('Lỗi: Không có thông tin sản phẩm!');
+                return;
+            }
+            
+            productInfo.quantity = quantity;
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const existingItemIndex = cartItems.findIndex(item => item.name === productInfo.name);
+            
+            if (existingItemIndex !== -1) {
+                cartItems[existingItemIndex].quantity += quantity;
+            } else {
+                cartItems.push(productInfo);
+            }
+            
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            
+            const modalInstance = bootstrap.Modal.getInstance(modal);
+            modalInstance.hide();
+            
+            updateCartBadge();
+            
+            alert('Đã thêm sản phẩm vào giỏ hàng!');
+        }
+
+        function updateCartBadge() {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const totalItems = cartItems.reduce((sum, item) => sum + (item.quantity || 0), 0);
+            const badge = document.getElementById('cart-badge');
+            badge.textContent = totalItems;
+            badge.style.display = totalItems > 0 ? 'block' : 'none';
+        }
+
+        document.addEventListener('DOMContentLoaded', updateCartBadge);
+    </script>
+
+    <!-- Cập nhật phần footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Thông tin liên hệ -->
+                <div class="col-md-4">
+                    <h5 class="text-uppercase">Cửa hàng công nghệ</h5>
+                    <p>Địa chỉ: 123 Đường Công Nghệ, Hà Nội, Việt Nam</p>
+                    <p>Điện thoại: (0123) 456 789</p>
+                    <p>Email: lienhe@congnghe.com</p>
+                </div>
+
+                <!-- Liên kết hữu ích -->
+                <div class="col-md-4">
+                    <h5 class="text-uppercase">Liên kết hữu ích</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="main.html" class="text-white text-decoration-none">Trang chủ</a></li>
+                        <li><a href="submit.html" class="text-white text-decoration-none">Hỗ trợ</a></li>
+                        <li><a href="submit.html" class="text-white text-decoration-none">Điều khoản</a></li>
+                        <li><a href="shopping_cart.html" class="text-white text-decoration-none">Giỏ hàng</a></li>
+                    </ul>
+                </div>
+
+                <!-- Mạng xã hội -->
+                <div class="col-md-4 text-center">
+                    <h5 class="text-uppercase">Theo dõi chúng tôi</h5>
+                    <a href="javascript:void(0)" onclick="alert('Coming soon!')" class="text-white me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="javascript:void(0)" onclick="alert('Coming soon!')" class="text-white me-3"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="javascript:void(0)" onclick="alert('Coming soon!')" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="javascript:void(0)" onclick="alert('Coming soon!')" class="text-white"><i class="fab fa-youtube fa-2x"></i></a>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="mb-0">Copyright &copy; 2024 Cửa hàng công nghệ. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

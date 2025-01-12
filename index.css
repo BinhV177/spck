@@ -1,0 +1,254 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+.navbar {
+    background-color: #333;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: white !important;
+}
+
+.navbar-brand {
+    color: rgba(245,245,247,255);
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    color: white !important;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    color: white !important;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffd700 !important; /* Gold color on hover */
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ffd700;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover:after {
+    width: 100%;
+}
+
+/* News list styles */
+.news-card {
+    margin-bottom: 2rem;
+    transition: transform 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.news-image {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* News detail styles */
+.news-detail-image {
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Form styles */
+.submit-form {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.footer {
+    background-color: #333;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .news-image {
+        height: 150px;
+    }
+    
+    .news-detail-image {
+        max-height: 300px;
+    }
+    
+    .submit-form {
+        margin: 1rem;
+        padding: 1rem;
+    }
+}
+
+/* Add these new styles */
+.nav-logo {
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Add these styles for the icons */
+.nav-link i {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.hero-section {
+    background-image: url('https://cdn.tgdd.vn/Files/2020/06/22/1264873/9bestportabletechgadgetsforeverydayuse_800x450.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Lớp overlay tối */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+/* Thêm styles cho footer */
+footer {
+    margin-top: 3rem;
+}
+
+footer h5 {
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer .list-unstyled li {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffd700 !important;
+}
+
+footer .fab {
+    transition: transform 0.3s ease;
+}
+
+footer .fab:hover {
+    transform: scale(1.2);
+}
+.product-card {
+    border: 1px solid #ddd;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card .card-body {
+    padding: 1.25rem;
+}
+
+.product-card .card-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-card .card-text {
+    font-size: 0.9rem;
+}
+
+.new-products {
+    background-color: #f8f9fa;
+}
+.hidden-products {
+    display: none;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.product-card.animate {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+#product-set-1, #product-set-2 {
+    transition: opacity 0.3s ease;
+}
+
+.d-none {
+    display: none !important;
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="shopping_cart.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Thanh điều hướng -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="main.html">Cửa hàng công nghệ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="main.html"><i class="fas fa-home"></i> Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="shopping_cart.html">
+                            <i class="fa-solid fa-cart-shopping"></i> Giỏ hàng
+                            <span class="badge bg-danger" id="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Nội dung giỏ hàng -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Giỏ hàng của bạn</h2>
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="cart-items" id="cart-items">
+                    <!-- Các sản phẩm trong giỏ hàng sẽ được thêm vào đây bằng JavaScript -->
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="cart-summary card">
+                    <div class="card-body">
+                        <h4 class="card-title">Tổng đơn hàng</h4>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>Tạm tính:</span>
+                            <span id="subtotal">0₫</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>Phí vận chuyển:</span>
+                            <span>30.000₫</span>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between mb-3 fw-bold">
+                            <span>Tổng cộng:</span>
+                            <span id="total">0₫</span>
+                        </div>
+                        <button class="btn btn-primary w-100" onclick="checkout()">Thanh toán</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Hàm hiển thị sản phẩm trong giỏ hàng
+        function displayCartItems() {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const cartContainer = document.getElementById('cart-items');
+            const cartCount = document.getElementById('cart-count');
+            
+            // Tính tổng số lượng sản phẩm
+            const totalQuantity = cartItems.reduce((sum, item) => sum + (item.quantity || 1), 0);
+            cartCount.textContent = totalQuantity;
+            
+            if (cartItems.length === 0) {
+                cartContainer.innerHTML = '<div class="alert alert-info">Giỏ hàng của bạn đang trống</div>';
+                updateTotals(0);
+                return;
+            }
+
+            let html = '';
+            let total = 0;
+
+            cartItems.forEach((item, index) => {
+                const price = parseInt(item.price.replace(/\D/g, ''));
+                const quantity = item.quantity || 1;
+                total += price * quantity;
+                
+                html += `
+                    <div class="cart-item card mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-3">
+                                <img src="${item.image}" class="img-fluid rounded-start" alt="${item.name}">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="card-title">${item.name}</h5>
+                                        <button class="btn btn-danger btn-sm" onclick="removeItem(${index})">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                    <p class="card-text text-danger fw-bold">${item.price}</p>
+                                    <div class="quantity-controls">
+                                        <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity(${index}, -1)">-</button>
+                                        <span class="mx-2">${quantity}</span>
+                                        <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity(${index}, 1)">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            cartContainer.innerHTML = html;
+            updateTotals(total);
+        }
+
+        function updateTotals(subtotal) {
+            const shipping = 30000;
+            const total = subtotal + shipping;
+            
+            document.getElementById('subtotal').textContent = formatPrice(subtotal);
+            document.getElementById('total').textContent = formatPrice(total);
+        }
+
+        function formatPrice(price) {
+            return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(price);
+        }
+
+        function removeItem(index) {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            cartItems.splice(index, 1);
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            displayCartItems();
+        }
+
+        function updateQuantity(index, change) {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const item = cartItems[index];
+            
+            if (!item.quantity) item.quantity = 1;
+            item.quantity += change;
+            
+            if (item.quantity < 1) item.quantity = 1;
+            
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            displayCartItems();
+        }
+
+        function checkout() {
+            alert('Cảm ơn bạn đã mua hàng!');
+            localStorage.removeItem('cartItems');
+            displayCartItems();
+        }
+
+        // Hiển thị giỏ hàng khi trang được tải
+        document.addEventListener('DOMContentLoaded', displayCartItems);
+    </script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa hàng công nghệ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="main_login_register.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Thanh điều hướng -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="main.html">
+                Cửa hàng công nghệ
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="main_login_register.html"><i class="fas fa-home"></i> Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="alert('Coming soon!')"><i class="fas fa-headset"></i> Hỗ trợ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="alert('Coming soon!')"><i class="fas fa-file-contract"></i> Điều khoản</a>
+                    </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link" href="javascript:void(0)" onclick="checkLogin()"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a>
+                    </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link" href="login.html"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html"><i class="fas fa-user-plus"></i> Đăng ký</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Khám phá công nghệ mới</h1>
+                <p>Trải nghiệm những sản phẩm công nghệ tốt nhất</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    function checkLogin() {
+        var isLoggedIn = false;
+        
+        if (isLoggedIn) {
+            window.location.href = "chi-tiet.html";
+        } else {
+            alert("Vui lòng đăng nhập để xem chi tiết hoặc để đặt mua!");
+            window.location.href = "login.html";
+        }
+    }
+    </script>
+
+    <!-- Phần còn lại của trang -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <h1>Các thương hiệu công nghệ phổ biến</h1>
+        </div>
+    </nav>
+
+    <!-- Danh sách sản phẩm -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Apple -->
+            <div class="col-md-4">
+                <div class="card news-card">
+                    <img src="https://www.apple.com/v/education/home/ae/images/meta/education_overview__ccmf0v3aqnjm_og.png?202410312151" class="card-img-top news-image" alt="Apple">
+                    <div class="card-body">
+                        <h5 class="card-title">Apple</h5>
+                        <p class="card-text">Apple được Steve Jobs, Steve Wozniak và Ronald Wayne thành lập...</p>
+                        <a href="javascript:void(0)" onclick="checkLogin()" class="btn btn-primary">Nhấn để Xem chi tiết</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Samsung -->
+            <div class="col-md-4">
+                <div class="card news-card">
+                    <img src="https://images.samsung.com/is/image/samsung/assets/vn/about-us/brand/logo/mo/256_144_2.png?$512_N_PNG$" class="card-img-top news-image" alt="Tin tức 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Samsung</h5>
+                        <p class="card-text">Samsung Electric Industries được thành lập vào năm 1969 ở Suwon, Hàn Quốc.[16] Các sản phẩm trong thời kì đầu là điện tử thiết bị điện gia dụng bao gồm truyền hình, máy tính, tủ lạnh, máy lạnh và máy giặt. Năm 1970, tập đoàn mẹ Samsung tiến hành thành lập các công ty con khác: Samsung-NEC, gia nhập với NEC Corporation của Nhật Bản để sản xuất thiết bị gia dụng và thiết bị nghe nhìn...</p>
+                        <a href="javascript:void(0)" onclick="checkLogin()" class="btn btn-primary">Nhấn để Xem chi tiết</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card news-card">
+                    <img src="https://static.vecteezy.com/system/resources/previews/020/190/680/non_2x/oppo-logo-oppo-icon-free-free-vector.jpg" class="card-img-top news-image" alt="Tin tức 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Oppo</h5>
+                        <p class="card-text">OPPO Electronics Corp (với tên thương hiệu là OPPO - Camera Phone, trước là: OPPO - Smartphone) là nhà sản xuất thiết bị điện tử, điện thoại di động Android Trung Quốc, có trụ sở đặt tại Đông Hoản, Quảng Đông, công ty con của tập đoàn điện tử BBK Electronics. OPPO cung cấp một số sản phẩm chính như máy nghe nhạc MP3, tablet, eBook, DVD/Blu-ray và điện thoại thông minh. Thành lập vào năm 2000, công ty đã đăng ký tên thương hiệu OPPO ở nhiều quốc gia trên thế giới...</p>
+                        <a href="javascript:void(0)" onclick="checkLogin()" class="btn btn-primary">Nhấn để Xem chi tiết</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sản phẩm công nghệ mới -->
+    <section class="new-products py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Sản Phẩm Công Nghệ Mới</h2>
+            <div class="row" id="product-set-1">
+                <!-- Sản phẩm 1 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card product-card h-100">
+                        <div class="badge bg-danger position-absolute" style="top: 0.5rem; right: 0.5rem">Mới</div>
+                        <img src="https://cdn.hoanghamobile.com/i/content/Uploads/2023/12/14/iphone-15-pro-max-natural-titanium-1-hhm.jpg" class="card-img-top" alt="iPhone">
+                        <div class="card-body">
+                            <h5 class="card-title">iPhone 15 Pro Max</h5>
+                            <p class="card-text text-danger fw-bold">34.990.000₫</p>
+                            <p class="card-text">Chip A17 Pro, Camera 48MP, Màn hình Super Retina XDR</p>
+                            <button onclick="checkLogin()" class="btn btn-primary w-100">Đặt vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sản phẩm 2 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card product-card h-100">
+                        <div class="badge bg-danger position-absolute" style="top: 0.5rem; right: 0.5rem">Mới</div>
+                        <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf" class="card-img-top" alt="Samsung">
+                        <div class="card-body">
+                            <h5 class="card-title">Samsung Galaxy S24 Ultra</h5>
+                            <p class="card-text text-danger fw-bold">31.990.000₫</p>
+                            <p class="card-text">Snapdragon 8 Gen 3, Camera 200MP, S Pen</p>
+                            <button onclick="checkLogin()" class="btn btn-primary w-100">Đặt vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sản phẩm 3 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card product-card h-100">
+                        <div class="badge bg-danger position-absolute" style="top: 0.5rem; right: 0.5rem">Mới</div>
+                        <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45" class="card-img-top" alt="Laptop">
+                        <div class="card-body">
+                            <h5 class="card-title">MacBook Pro M3</h5>
+                            <p class="card-text text-danger fw-bold">49.990.000₫</p>
+                            <p class="card-text">Chip M3 Max, 18GB RAM, 1TB SSD</p>
+                            <button onclick="checkLogin()" class="btn btn-primary w-100">Đặt vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sản phẩm 4 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card product-card h-100">
+                        <div class="badge bg-danger position-absolute" style="top: 0.5rem; right: 0.5rem">Mới</div>
+                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12" class="card-img-top" alt="Smart Watch">
+                        <div class="card-body">
+                            <h5 class="card-title">Apple Watch Series 9</h5>
+                            <p class="card-text text-danger fw-bold">10.990.000₫</p>
+                            <p class="card-text">Màn hình Always-On, Chip S9, Pin 18 giờ</p>
+                            <button onclick="checkLogin()" class="btn btn-primary w-100">Đặt vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm set 2 (ban đầu ẩn đi) -->
+            <div class="row d-none" id="product-set-2">
+                <!-- Sản phẩm 5 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card product-card h-100">
+                        <div class="badge bg-danger position-absolute" style="top: 0.5rem; right: 0.5rem">Mới</div>
+                        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/airpods-pro-2-hero-select-202409_FV1_FMT_WHH?wid=752&hei=636&fmt=jpeg&qlt=90&.v=1725492498882" class="card-img-top" alt="AirPods">
+                        <div class="card-body">
+                            <h5 class="card-title">AirPods Pro 2</h5>
+                            <p class="card-text text-danger fw-bold">6.990.000₫</p>
+                            <p class="card-text">Chống ồn chủ động, Âm thanh không gian</p>
+                            <button onclick="checkLogin()" class="btn btn-primary w-100">Đặt vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sản phẩm 6 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card product-card h-100">
+                        <div class="badge bg-danger position-absolute" style="top: 0.5rem; right: 0.5rem">Mới</div>
+                        <img src="https://cdn.ankhang.vn/media/product/25419_ipad_pro_m2_12_9_inch_wifi_512gb_mnxu3za_a.jpg" class="card-img-top" alt="iPad">
+                        <div class="card-body">
+                            <h5 class="card-title">iPad Pro M2</h5>
+                            <p class="card-text text-danger fw-bold">28.990.000₫</p>
+                            <p class="card-text">Chip M2, Màn hình Liquid Retina XDR</p>
+                            <button onclick="checkLogin()" class="btn btn-primary w-100">Đặt vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sản phẩm 7 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card product-card h-100">
+                        <div class="badge bg-danger position-absolute" style="top: 0.5rem; right: 0.5rem">Mới</div>
+                        <img src="https://thetekcoffee.com/wp-content/uploads/2023/08/danh-gia-samsung-galaxy-tab-s9-ultra-5g.webp" class="card-img-top" alt="Galaxy Tab">
+                        <div class="card-body">
+                            <h5 class="card-title">Galaxy Tab S9 Ultra</h5>
+                            <p class="card-text text-danger fw-bold">24.990.000₫</p>
+                            <p class="card-text">Snapdragon 8 Gen 2, S Pen</p>
+                            <button onclick="checkLogin()" class="btn btn-primary w-100">Đặt vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sản phẩm 8 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card product-card h-100">
+                        <div class="badge bg-danger position-absolute" style="top: 0.5rem; right: 0.5rem">Mới</div>
+                        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mba13-midnight-select-202402?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1708367688034" class="card-img-top" alt="MacBook Air">
+                        <div class="card-body">
+                            <h5 class="card-title">MacBook Air M2</h5>
+                            <p class="card-text text-danger fw-bold">27.990.000₫</p>
+                            <p class="card-text">Chip M2, 8GB RAM, 256GB SSD</p>
+                            <button onclick="checkLogin()" class="btn btn-primary w-100">Đặt vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nút chuyển đổi sản phẩm -->
+            <div class="text-center mt-4">
+                <button onclick="toggleProducts()" class="btn btn-lg btn-outline-primary">
+                    <i class="fas fa-sync-alt me-2"></i>Xem thêm sản phẩm khác
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thêm script cho chức năng toggle products -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const set1 = document.getElementById('product-set-1');
+        const set2 = document.getElementById('product-set-2');
+        const toggleBtn = document.querySelector('.btn-outline-primary');
+        let currentSet = 1;
+
+        // Đảm bảo set 1 hiển thị ngay từ đầu
+        set1.style.opacity = '1';
+        set1.querySelectorAll('.product-card').forEach(card => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        });
+
+        toggleBtn.addEventListener('click', function() {
+            if (currentSet === 1) {
+                set1.classList.add('d-none');
+                set2.classList.remove('d-none');
+                
+                // Animation cho set 2
+                const products = set2.querySelectorAll('.product-card');
+                products.forEach((product, index) => {
+                    product.style.opacity = '0';
+                    product.style.transform = 'translateY(20px)';
+                    
+                    setTimeout(() => {
+                        product.style.transition = 'all 0.8s ease';
+                        product.style.opacity = '1';
+                        product.style.transform = 'translateY(0)';
+                    }, index * 200);
+                });
+                
+                currentSet = 2;
+            } else {
+                set2.classList.add('d-none');
+                set1.classList.remove('d-none');
+                
+                // Animation cho set 1
+                const products = set1.querySelectorAll('.product-card');
+                products.forEach((product, index) => {
+                    product.style.opacity = '0';
+                    product.style.transform = 'translateY(20px)';
+                    
+                    setTimeout(() => {
+                        product.style.transition = 'all 0.8s ease';
+                        product.style.opacity = '1';
+                        product.style.transform = 'translateY(0)';
+                    }, index * 200);
+                });
+                
+                currentSet = 1;
+            }
+        });
+    });
+
+    function checkLogin() {
+        alert("Vui lòng đăng nhập để xem chi tiết!");
+        window.location.href = "login.html";
+    }
+    </script>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <!-- Thông tin liên hệ -->
+            <div class="col-md-4">
+                <h5 class="text-uppercase">Cửa hàng công nghệ</h5>
+                <p>Địa chỉ: 123 Đường Công Nghệ, Hà Nội, Việt Nam</p>
+                <p>Điện thoại: (0123) 456 789</p>
+                <p>Email: lienhe@congnghe.com</p>
+            </div>
+
+            <!-- Liên kết hữu ích -->
+            <div class="col-md-4">
+                <h5 class="text-uppercase">Liên kết hữu ích</h5>
+                <ul class="list-unstyled">
+                    <li><a href="main.html" class="text-white text-decoration-none">Trang chủ</a></li>
+                    <li><a href="javascript:void(0)" onclick="alert('Coming soon!')" class="text-white text-decoration-none">Hỗ trợ</a></li>
+                    <li><a href="javascript:void(0)" onclick="alert('Coming soon!')" class="text-white text-decoration-none">Điều khoản</a></li>
+                    <li><a href="login.html" class="text-white text-decoration-none">Đăng nhập</a></li>
+                </ul>
+            </div>
+
+            <!-- Mạng xã hội -->
+            <div class="col-md-4 text-center">
+                <h5 class="text-uppercase">Theo dõi chúng tôi</h5>
+                <a href="javascript:void(0)" onclick="alert('Coming soon!')" class="text-white me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="javascript:void(0)" onclick="alert('Coming soon!')" class="text-white me-3"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="javascript:void(0)" onclick="alert('Coming soon!')" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="javascript:void(0)" onclick="alert('Coming soon!')" class="text-white"><i class="fab fa-youtube fa-2x"></i></a>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <p class="mb-0">Copyright &copy; 2024 Cửa hàng công nghệ. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>
+<!DOCTYPE html>
